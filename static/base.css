@@ -1,49 +1,68 @@
-.pragmatic_header_logo{
+
+.pragmatic_header_logo {
     margin: 2rem 0;
-    font-family: 'Bona Nova', serif;
-    line-height: 1.2;
+    font-family: 'Pacifico', cursive;
 }
 
-.pragmatic_header_button{
+.pragmatic_header_button {
     margin-bottom: 2rem;
 }
 
-.pragmatic_footer_logo{
-   margin-top: 2rem ;
-    font-family: 'Bona Nova', serif;
-}
-.pragmatic_footer_button{
-    margin-bottom: 2rem ;
+.pragmatic_footer_logo {
+    margin: 1.5rem 0;
+    font-family: 'Pacifico', cursive;
 }
 
+.pragmatic_footer_button {
+    margin-top: 2rem;
+}
 
 .mw-500 {
-    max-width : 500px;
+    max-width: 500px;
     margin: 1rem 1.5rem;
-    line-height: 3.5;
 }
 
-.round_button{
+.profile_image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20rem;
+    object-fit: cover;
+}
+
+.NNS_B {
+    font-family: 'NanumSquareB', cursive;
+}
+
+.round_button {
     color: black;
-    test_decoration: none;
-    box-shadow: 3px 3px 10px black;
+    text-decoration: none;
+    box-shadow: 0 0 3px black;
     border-radius: 20rem;
     padding: 0.3rem;
 }
 
-.round_button:hover{
+.round_button:hover {
     color: dimgrey;
-
 }
 
-.article_image{
+.article_image {
     border-radius: 2rem;
-    width : 70%;
+    width: 70%;
     box-shadow: 0 0 1rem grey;
 }
 
-.article_content{
+.article_content {
     font-size: 1.1rem;
     text-align: left;
     margin: 2rem 0;
+}
+
+.comment_box {
+    border: solid;
+    border-color: #b0b0b0;
+    text-align: left;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.1rem;
 }
