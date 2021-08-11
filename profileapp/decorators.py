@@ -12,4 +12,4 @@ def profile_ownership_required(func):
         else:
             return HttpResponseForbidden()
 
-    return 
+    return decorated
