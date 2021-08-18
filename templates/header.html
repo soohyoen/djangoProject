@@ -9,7 +9,9 @@
                 Articles
             </a>
         </span>
-        <span>info</span>
+        <span><a href="{% url 'projectapp:list' %}">
+                Projects
+        </a></span>
 
 
         {% if not user.is_authenticated %}
