@@ -73,3 +73,13 @@
         font-size: 13px;
     }
 }
+
+
+a{
+    text_decoration:none;
+    color: black;
+}
+
+a:hover{
+    color:black;
+}
