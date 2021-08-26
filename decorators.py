@@ -22,7 +22,6 @@ def decorator(func):
         print('함수 끝!')
     return decorated
 
-
 @decorator
 
 def hello_world(input_text):
