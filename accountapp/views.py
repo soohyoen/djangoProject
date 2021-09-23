@@ -23,6 +23,8 @@ class AccountCreateView(CreateView):
         return reverse('accountapp:detail',kwargs={'pk':self.object.pk})
 
 
+# 요기서 get_context_data 가 뭐였는지 생각해보시면 될 거 같아요
+
 class AccountDetailView(DetailView, MultipleObjectMixin):
     model = User
     context_object_name = 'target_user'
