@@ -5,12 +5,12 @@ services:
     image: soohyoen_django:05
     networks:
       - django
+    secrets:
+      - DJANGO_SECRET_KEY
+      - MARIADB_PASSWORD
     volumes:
       - django_static:/home/djangoProject/staticfiles/
       - django_media:/home/djangoProject/media/
-    secrets:
-      - MARIADB_ROOT_PASSWORD
-      - DJANGO_SECRET_KEY
   nginx:
     image: nginx:1.19.5
     networks:
@@ -28,7 +28,7 @@ services:
     networks:
       - django
     volumes:
-      - django_maria:/var/lib/mysql/
+      - django_maria:/var/lib/mysql
     secrets:
       - MARIADB_PASSWORD
       - MARIADB_ROOT_PASSWORD
@@ -49,7 +49,7 @@ volumes:
 secrets:
   DJANGO_SECRET_KEY:
     external: true
-  MYSQL_PASSWORD:
+  MARIADB_PASSWORD:
     external: true
-  MYSQL_ROOT_PASSWORD:
+  MARIADB_ROOT_PASSWORD:
     external: true

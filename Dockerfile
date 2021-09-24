@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'asdasasdadddsdqw'
+RUN echo 'asdasasdaasddddddddsdqw'
 
 RUN git clone https://github.com/soohyoen/djangoProject.git
 
