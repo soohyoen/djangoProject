@@ -29,13 +29,13 @@ services:
     volumes:
       - django_maria:/var/lib/mysql/
     secrets:
-      - MYSQL_PASSWORD
-      - MYSQL_ROOT_PASSWORD
+      - MARIADB_PASSWORD
+      - MARIADB_ROOT_PASSWORD
     environment:
-      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/MYSQL_ROOT_PASSWORD
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/MARIADB_ROOT_PASSWORD
       MARIADB_DATABASE: django
       MARIADB_USER: django
-      MARIADB_PASSWORD_FILE: /run/secrets/MYSQL_PASSWORD
+      MARIADB_PASSWORD_FILE: /run/secrets/MARIADB_PASSWORD
 
 networks:
   django:
