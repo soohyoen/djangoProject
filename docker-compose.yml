@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   django:
-    image: soohyoen_django:04
+    image: soohyoen_django:05
     networks:
       - django
     volumes:
@@ -16,6 +16,9 @@ services:
       - django_static:/data/static/
       - django_media:/data/media/
       - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
+    secrets:
+      - MYSQL_PASSWORD
+      - DJANGO_SECRET_KEY
     ports:
       - 80:80
 
@@ -25,11 +28,14 @@ services:
       - django
     volumes:
       - django_maria:/var/lib/mysql/
+    secrets:
+      - MYSQL_PASSWORD
+      - MYSQL_ROOT_PASSWORD
     environment:
-      MARIADB_ROOT_PASSWORD: soohyoen123
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/MYSQL_ROOT_PASSWORD
       MARIADB_DATABASE: django
       MARIADB_USER: django
-      MARIADB_PASSWORD: soohyoen123
+      MARIADB_PASSWORD_FILE: /run/secrets/MYSQL_PASSWORD
 
 networks:
   django:
@@ -38,3 +44,11 @@ volumes:
   django_static:
   django_media:
   django_maria:
+
+secrets:
+  DJANGO_SECRET_KEY:
+    external: true
+  MYSQL_PASSWORD:
+    external: true
+  MYSQL_ROOT_PASSWORD:
+    external: true

@@ -8,8 +8,6 @@ RUN git clone https://github.com/soohyoen/djangoProject.git
 
 WORKDIR /home/djangoProject/
 
-RUN echo "SECRET_KEY=django-insecure-c!5obm$)lkt$y18+z#)d^27e$jeb+t4tx*0+606_n^_f1=^=1r" > .env
-
 RUN pip install -r requirements.txt
 
 RUN pip install gunicorn
