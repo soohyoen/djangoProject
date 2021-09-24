@@ -17,7 +17,7 @@ services:
       - django_media:/data/media/
       - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
     secrets:
-      - MYSQL_PASSWORD
+      - MARIADB_ROOT_PASSWORD
       - DJANGO_SECRET_KEY
     ports:
       - 80:80
